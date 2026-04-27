@@ -13,7 +13,7 @@ body {
   background: linear-gradient(-45deg, #2b0052, #4b0082, #190033, #6a0dad);
   background-size: 400% 400%; animation: gradientBG 15s ease infinite;
   color: var(--text-color); display: flex; justify-content: center;
-  align-items: center; min-height: 100vh; max-height: 100vh; overflow: hidden;
+  align-items: center; min-height: 100vh; overflow-x: hidden; overflow-y: auto;
   position: relative; z-index: 0; transition: background 1s ease;
 }
 
@@ -36,7 +36,7 @@ h2 { font-size: 2.5rem; }
   display: none; flex-direction: column; align-items: center; justify-content: center;
   width: 100%; max-width: 1000px; padding: 20px; box-sizing: border-box; text-align: center;
   animation: fadeIn 0.5s ease;
-  height: 100vh;
+  min-height: 100vh; height: auto;
 }
 .view.active { display: flex; }
 
@@ -219,20 +219,55 @@ header {
 }
 
 @media (max-width: 800px) {
+  .view { justify-content: flex-start; padding-top: 40px; padding-bottom: 40px; }
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  .intro-dialogue { font-size: 1.2rem; padding: 20px; }
+  .btn { font-size: 1.2rem; padding: 10px 20px; margin: 8px; }
+  .char-card { padding: 10px; margin-bottom: 10px; }
+  .svg-avatar { width: 100px; height: 120px; }
+
   .side-panel {
      position: static;
      transform: none;
      flex-direction: row;
      width: 100%;
      padding: 10px;
-     margin-bottom: 10px;
+     margin-bottom: 15px;
      border-radius: 15px;
      justify-content: center;
+     background: rgba(0,0,0,0.6);
+     box-sizing: border-box;
   }
-  .side-panel svg { width: 60px; height: 80px; }
-  .hero-name { font-size: 1.2rem; margin: 0 10px; }
-  .hero-title { font-size: 1rem; }
+  .side-panel svg { width: 50px; height: 60px; animation: none; }
+  .hero-name { font-size: 1.1rem; margin: 0 10px; }
+  .hero-title { font-size: 0.9rem; }
+  
+  header { font-size: 1rem; padding: 5px 10px; }
+  .master-emoji { font-size: 2.5rem; }
+  .speech-bubble { font-size: 1.1rem; padding: 10px 15px; }
+
+  .ingredient-btn { font-size: 2.5rem; padding: 8px; }
+  
   .cauldron-emoji { font-size: 7rem; }
-  .cauldron-contents { bottom: 70px; }
+  .cauldron-contents { bottom: 70px; width: 120px; height: 70px; }
+  .cauldron-item { font-size: 2rem; }
   .main-panel { max-width: 100%; }
+
+  .modal-content { padding: 20px; }
+  .modal-ingredient { font-size: 4rem; }
+  .num-btn { width: 45px; height: 45px; font-size: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.8rem; }
+  .chars-container { gap: 10px; }
+  .char-card { width: 45%; padding: 5px; }
+  .svg-avatar { width: 80px; height: 100px; }
+  .intro-dialogue { font-size: 1rem; padding: 15px; }
+  .master-emoji { font-size: 2rem; }
+  .speech-bubble { font-size: 1rem; }
+  .ingredient-btn { font-size: 2rem; padding: 5px; }
+  .cauldron-emoji { font-size: 6rem; }
+  .cauldron-contents { bottom: 60px; }
 }
