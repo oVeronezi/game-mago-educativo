@@ -47,3 +47,4 @@ Isso criará uma pasta chamada `/dist` com os arquivos finais minificados e otim
 
 ---
 *Divirta-se criando poções mágicas e salvando o mundo!* ✨
+
