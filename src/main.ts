@@ -413,5 +413,28 @@ function renderViewFinal() {
 
 // Inicia com o fundo animado
 generateBackgroundStars();
+
+// Lógica do Modal de Desenvolvedores
+const devsModal = document.getElementById('devsModal')!;
+const devsBtn = document.getElementById('devsBtn')!;
+const closeDevsBtn = document.getElementById('closeDevsBtn')!;
+
+devsBtn.addEventListener('click', () => {
+  devsModal.classList.add('active');
+  playSuccessSound();
+});
+
+closeDevsBtn.addEventListener('click', () => {
+  devsModal.classList.remove('active');
+  playDropSound();
+});
+
+// Fechar modal ao clicar fora
+devsModal.addEventListener('click', (e) => {
+  if (e.target === devsModal) {
+    devsModal.classList.remove('active');
+  }
+});
+
 // Começa a tela 0
 renderViewIntro();

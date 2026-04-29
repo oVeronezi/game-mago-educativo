@@ -1,16 +1,62 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mago Contador</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=MedievalSharp&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mago Contador</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=MedievalSharp&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <!-- Botão de Desenvolvedores -->
+  <button id="devsBtn" class="devs-btn" title="Desenvolvedores">
+    <span class="devs-icon">👨‍💻</span>
+  </button>
+
+  <!-- Modal de Desenvolvedores -->
+  <div id="devsModal" class="modal-overlay">
+    <div class="modal-content devs-modal-content">
+      <button id="closeDevsBtn" class="close-modal-btn">&times;</button>
+      <h2 class="title-font">Equipe de Desenvolvimento</h2>
+      <div class="devs-container">
+        <!-- Card 1 -->
+        <div class="dev-card">
+          <div class="dev-photo-container">
+            <img src="https://github.com/oVeronezi.png" alt="Luis Felipe Veronezi" class="dev-photo"
+              onerror="this.src='https://ui-avatars.com/api/?name=Luis+Felipe&background=8a2be2&color=fff'">
+          </div>
+          <h3>Luis Felipe Veronezi</h3>
+          <div class="dev-links">
+            <a href="https://www.linkedin.com/in/luis-felipe-veronezi-57a942304/" target="_blank"
+              class="dev-link linkedin">LinkedIn</a>
+            <span class="dev-email">luisfelipevbernardo@gmail.com</span>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="dev-card">
+          <div class="dev-photo-container">
+            <img src="https://avatars.githubusercontent.com/u/181371049?v=4" alt="Leonardo Antoniassi"
+              class="dev-photo">
+          </div>
+          <h3>Leonardo Antoniassi</h3>
+          <div class="dev-links">
+            <a href="https://www.linkedin.com/in/leonardo-antoniassi-46084a322/" target="_blank"
+              class="dev-link linkedin">LinkedIn</a>
+            <span class="dev-email">leoantoniassi9@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
